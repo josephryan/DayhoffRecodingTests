@@ -9,15 +9,17 @@ Dayhoff recoding is the process of recoding each amino acid in a protein alignme
 
 ### How are Dayhoff recodings derived?
 
-Dayhoff recodings are loosely based on Dayhoff matrices (AKA PAM matrices), but I am aware of no paper explaining how they were derived. These matrices have a number associated with them that corresponds to the percent change of the proteins used to construct the matrix.  PAM10 corresponds to about 90% identity, PAM30 75% identity, PAM70 55% identity, PAM120 37% identity, and PAM250 about 20% identity. Low PAM numbers (e.g. PAM25) are more appropriate (at least for BLAST) when looking for short highly related sequences, and  high PAM numbers (e.g. PAM250) for longer more distantly related sequences. See Pearson 2013 for a detailed discussion. Importantly these matrices are not a one-size fits all.
+Dayhoff recodings are loosely based on Dayhoff matrices (AKA PAM matrices), but I am aware of no paper explaining how they were derived. The PAM1 matrix is the only matrix emperically determined from very closely related proteins. The underlying mutation data was then extrapolated to matrices that can be used for greater distances. The PAM250 is the matrix used for the DayHoff recoding. Other matrices for example BLOSUM were derived from sequence alignments of various divergence (rather than derived). These matrices are the defaults for programs like BLAST. See Pearson 2013 for a detailed discussion. Importantly, none of these matrices are a one-size fits all.
 
-### Are Dayhoff recodings the best possible recoding?
+### Are Dayhoff recodings the best possible approach?
+
+The rationale for applying recodings is sound in principle, but it is unclear why recoding would be preferred over applying a CAT model, which is specifically designed to address the same issue and does so in a probabilistic framework. Furthermore, it is unclear why DayHoff (PAM25O) and why 6 categories.
 
 To address this question, I explored building 6 categories of equal size as the Dayhoff recodings (i.e. 5, 4, 4, 3, 3, 1) to see if I could build recodings that scored better than the one in common use (i.e. ASTGP, DNEQ, RKH, MVIL, FYW and C). To do this I considered all the protein scoring matrices available in BLAST (ftp://ftp.ncbi.nih.gov/blast/matrices/). This included BLOSUM as well as PAM matrices.  I scored them by adding each combination in each category according to the particular matrix.  Higher scores were better.
 
 ### FINDINGS
 
-For each matrix, I used a semi-exaustive method to construct the best set of recodings that I could assemble and then compared the score of these recodings to the commonly used Dayhoff recodings.  In 34 of 69 matrices tested, my semi-exaustive method produced better scores than the Dayhoff codings. In 20 of the remaining 35 cases, I produced alternative recodings that scored equally well as the Dayhoff recodings, of wich 12 were different than the standard Dayhoff recoding. This means only 23 out of 69 matrices was Dayhoff encoding unequivically the clear best choice for encoding.
+For each matrix, I used a semi-exaustive method to construct the best set of recodings that I could assemble and then compared the score of these recodings to the commonly used Dayhoff recodings. In 34 of 69 matrices tested, my semi-exaustive method produced better scores than the Dayhoff codings. In 20 of the remaining 35 cases, I produced alternative recodings that scored equally well as the Dayhoff recodings, of wich 12 were different than the standard Dayhoff recoding. This means only 23 out of 69 matrices was Dayhoff encoding unequivically the clear best choice for encoding.
 
 ### IMPLICATIONS
 
@@ -25,7 +27,7 @@ If the matrices where the DayHoff recodings outperformed my custom recodings are
 
 ### CONCLUSION
 
-For the reasons stated above, there is insufficient rationale for applying Dayhoff recoding in phylogenetic studies. It is almost certain to give different topologies when applied to large difficult datasets and there is no satisfactory reasoning to accept such a result. The claims that this coding effectively compensates for substitution saturation and compositional heterogeneity are not substantiated and, in light of the results herein, seem problematic.
+For the reasons stated above, I argue that Dayhoff recoding should be used with caution. Given that 19/20 amino acids are affected by the application of Dayhoff recoding, it is almost certain to give alternative topologies when applied to large difficult datasets. Given all of the uncertainty surrounding Dayhoff recoding (ie. the choice of matrix, the affect of different matrices on the codings, the availability of probabilistic methods that address the problem) I don't see a strong case for applying Dayhoff recoding.
 
 ### FILES 
 
