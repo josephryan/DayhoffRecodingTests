@@ -31,7 +31,7 @@ If recoding is insisted upon, wouldn't it make more sense to code each column ba
 
 ### CONCLUSION
 
-For the reasons stated above, I argue that Dayhoff recoding should be used with caution. Given that 19/20 amino acids are affected by the application of Dayhoff recoding, it is almost certain to give alternative topologies when applied to large difficult datasets. Given all of the uncertainty surrounding Dayhoff recoding (ie. the choice of matrix, the affect of different matrices on the codings, the availability of probabilistic methods that address the problem) I don't see a strong case for applying Dayhoff recoding.
+For the reasons stated above, I argue that Dayhoff recoding should be used with caution. Given that 19/20 amino acids are affected by the application of Dayhoff recoding, it is almost certain to give alternative topologies when applied to large difficult datasets. The parameters used to construct and apply the recodings are arbitrary, and may conflict with the probabilistic methods designed to address the same challenges (saturation and long-branch attraction). Given all of the uncertainty surrounding Dayhoff recoding (ie. the choice of matrix, the affect of different matrices on the codings, the availability of probabilistic methods that address the problem) I don't see a strong case for applying Dayhoff recoding, and take results based on these analyses with a grain of salt.
 
 ### FILES 
 
