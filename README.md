@@ -25,6 +25,10 @@ For each matrix, I used a semi-exaustive method to construct the best set of rec
 
 If the matrices where the DayHoff recodings outperformed my custom recodings are appropriate for the dataset under analysis, than perhaps recoding could be justified, but if the matrix is not appropriate than the standard recoding is not appropriate.  However, in the case of large concatenated datasets, it seems almost certain that a single scoring matrix would be insufficient to justify across an entire alignment. Further, it is counter-intuitive to apply such a drastic step as recoding uniformly across a large multi-partitioned phylgeonomic matrix and then apply a hyper-site-specific model like CAT+GTR+Г4 to the data.
 
+### ALTERNATIVE RECODING APPROACHES
+
+If recoding is insisted upon, wouldn't it make more sense to code each column based on the matrix corresponding to the percent identity of that column? Why PAM and not LG recoding? That still doesnt adress how you'd define cluster number and sizes, and which suite of matrices to use. I have run some analyses applying qt clustering to determining number and size of clusters, but it still requires determining a threshold. Even so, I was unable to apply a threshold that gave me the structure in the Dayhoff recoding scheme. QT clustering (which is a greedy algorithm by nature) usually ended up w one or two large clusters and a bunch of singlets, which might be more appropriate. 
+
 ### CONCLUSION
 
 For the reasons stated above, I argue that Dayhoff recoding should be used with caution. Given that 19/20 amino acids are affected by the application of Dayhoff recoding, it is almost certain to give alternative topologies when applied to large difficult datasets. Given all of the uncertainty surrounding Dayhoff recoding (ie. the choice of matrix, the affect of different matrices on the codings, the availability of probabilistic methods that address the problem) I don't see a strong case for applying Dayhoff recoding.
