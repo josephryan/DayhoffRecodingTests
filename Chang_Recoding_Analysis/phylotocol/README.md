@@ -1,4 +1,4 @@
-# PLANNED ANALYSES FOR TESTING CTENOPHORE PHYLOGENY AND SIGNALS OF DIVERGENCE  
+# PLANNED ANALYSES FOR TESTING DAYHOFF RECODING  
  Principle Investigator: Joseph Ryan <br />
  Support Personnel: Alexandra Hernandez <br />
  Draft or Version Number: v.1.0 <br />
