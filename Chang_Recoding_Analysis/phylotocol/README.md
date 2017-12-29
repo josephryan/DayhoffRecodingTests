@@ -8,7 +8,7 @@
 ## 1 INTRODUCTION: BACKGROUND INFORMATION AND SCIENTIFIC RATIONALE  
 
 ### 1.1 _Background Information_  
-Dayhoff (or PAM) matrices are substitution matrices used to score amino acid substitutions in sequence alignment or phylogenetic analyses. Recently, Dayhoff-6 recoding has surfaced as a technique aimed to reduce substitution saturation and compositional heterogeinity that occurs when exploring distant phylogenetic relationships. Dayhoff recoding will recode amino acids from Dayhoff matrices according to six groups of chemically related amino acids that frequently replace one another (Hrdy et al. 2005).
+Dayhoff (or PAM) matrices are substitution matrices used to score amino acid substitutions in sequence alignment or phylogenetic analyses. Recently, Dayhoff-6 recoding has surfaced as a technique aimed to reduce substitution saturation and compositional heterogeneity that occurs when exploring distant phylogenetic relationships. Dayhoff recoding will recode amino acids from Dayhoff matrices according to six groups of chemically related amino acids that frequently replace one another (Hrdy et al. 2005).
 
 ### 1.2 _Rationale_ 
 While the principle of using Dayhoff-6 recoding is to address issues of substitution saturation and compositional bias, it assumes that patterns of substitution are the same across a sequence, and thus removes data that may be important for these analyses. Furthermore, it has never been tested to see if it does in fact improve phylogenetic reconstruction.
