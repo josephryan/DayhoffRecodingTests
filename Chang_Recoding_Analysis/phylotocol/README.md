@@ -29,7 +29,7 @@ _RAxML (Stamatakis 2014)_
 
 ```raxmlHPC -f a -x 420 -p 420 -N 1000 -m PROTGAMMADAYHOFF -s Chang_AA.phy –n Chang_dayhoff```
 
-#### 2.2 Simulate the evolution of amino acids along the phylogeny produced in Chang et al. (2015) using the PAM model (i.e. PAM250, the model which Dayhoff-6 decoding is based) different intervals of branch lengths (units of substitutions per site). Scale branch length = 0.5, 1, 1.5, 2, 2.5, 3
+#### 2.2 Simulate the evolution of amino acids along the phylogeny produced in Chang et al. (2015) using the PAM model (i.e. PAM250, the model which Dayhoff-6 decoding is based) and different intervals of branch lengths (units of substitutions per site). Scale branch length = 0.5, 1, 1.5, 2, 2.5, 3
 
 _Seq-Gen (Rambaut & Grassly 1997)_
 
