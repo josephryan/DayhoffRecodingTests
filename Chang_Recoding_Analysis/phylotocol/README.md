@@ -59,27 +59,34 @@ _RAxML_
 
 #### 2.4 Repeat steps 2.2-2.3 to simulate the evolution of amino acids along the phylogeny produced in Feuda et al. (2017) and generate maximum-likelihood trees for each of the simulated alignments.
 
-#### 2.5 Combine each of the four phylogenetic reconstructions from 2.3.1 - 2.3.4 into one treefile along with the true tree used for simulation, as well as the suboptimal bootstraps trees generated in 2.1. Then run an approximately unbiased (AU) test on all of these trees given the simulated dataset.
+~~~#### 2.5 Combine each of the four phylogenetic reconstructions from 2.3.1 - 2.3.4 into one treefile along with the true tree used for simulation, as well as the suboptimal bootstraps trees generated in 2.1. Then run an approximately unbiased (AU) test on all of these trees given the simulated dataset.~~~
 
-_CONSEL (Shimodaira & Hasegawa 2001)_
+~~_CONSEL (Shimodaira & Hasegawa 2001)_~~
 
-```cat Chang_tree RAxML_best.Chang_seqgen_dayhoff RAxML_best.Chang_seqgen_dayhoff6 RAxML_best.Chang_seqgen_LG RAxML_best.Chang_seqgen_bestfit RAxML_bootstrap.Chang_LG >> 105trees.tre```
+~~```cat Chang_tree RAxML_best.Chang_seqgen_dayhoff RAxML_best.Chang_seqgen_dayhoff6 RAxML_best.Chang_seqgen_LG RAxML_best.Chang_seqgen_bestfit RAxML_bootstrap.Chang_LG >> 105trees.tre```~~
 
-```seqmt --puzzle RAxML_perSiteLLs.104trees```
+~~```seqmt --puzzle RAxML_perSiteLLs.104trees```~~
 
-```makermt RAxML_perSiteLLs```
+~~```makermt RAxML_perSiteLLs```~~
 
-```consel RAxML_perSiteLLs```
+~~```consel RAxML_perSiteLLs```~~
 
-```catpv RAxML_perSiteLLs > out.au```
+~~```catpv RAxML_perSiteLLs > out.au```~~
 
-#### 2.6 AU Scoring
-We will score trees based on their rank and p-value generated from the AU test. For rank scores we will simply add ranks for all simulations. We will consider models with lower rank scores to be better. For p-value scores we will simply add p-values for each test. In this case, p-value scores that are higher will indicate better models. We will perform these rankings for each of the models and present these data as support for or against Dayhoff-6 recoding. 
+~~#### 2.6 AU Scoring
+We will score trees based on their rank and p-value generated from the AU test. For rank scores we will simply add ranks for all simulations. We will consider models with lower rank scores to be better. For p-value scores we will simply add p-values for each test. In this case, p-value scores that are higher will indicate better models. We will perform these rankings for each of the models and present these data as support for or against Dayhoff-6 recoding. ~~~~~
+
+#### 2.5 Calculate total split distances for each treatment and reconstruction
+We use the TOPD/FMTS program to calculate split distances comparing each reconstruction to the tree that was used for simulation
+
+```topd_v4.6.pl -m split -f $day_filename -r no```
 
 ## 3 WORK COMPLETED SO FAR WITH DATES 
 18 December 2017- We started step 2.1 (suboptimal tree generation using bootstraps) prior to the release of phylotocol version 1.0, but did not examine the results. 
 
 ## 4 LITERATURE REFERENCED  
+Capella-Gutiérrez S, Gabaldón T. Measuring guide-tree dependency of inferred gaps in progressive aligners. Bioinformatics. 2013 Feb 23;29(8):1011-7.
+
 Chang, E. S., Neuhof, M., Rubinstein, N. D., Diamant, A., Philippe, H., Huchon, D., & Cartwright, P. (2015). Genoinsights into the evolutionary origin of Myxozoa within Cnidaria. Proceedings of the National Academy of Sciences of the United States of America, 112(48), 14912–7. 
 
 Feuda, R., Dohrmann, M., Pett, W., Philippe, H., Rota-Stabelli, O., Lartillot, N., Wörheide, G., Pisani, D. (2017). Improved Modeling of Compositional Heterogeneity Supports Sponges as Sister to All Other Animals. Current Biology, 27, 3864–3870.
@@ -91,3 +98,7 @@ Rambaut A, Grassly NC. 1997. Seq-Gen: An application for the Monte Carlo simulat
 Shimodaira, H., & Hasegawa, M. (2001). CONSEL: for assessing the confidence of phylogenetic tree selection. BIOINFORMATICS APPLICATIONS NOTE, 17(12), 1246–1247.
 
 Stamatakis, A. (2014) RAxML Version 8: A tool for phylogenetic analysis and post-analysis of large phylogenies. Bioinformatics, 30, 1312–1313.
+
+## 5 changes
+
+We decided that the AU tests which used PAM250 for sites analyses was biased in favor of PAM250 and against Decoding.  We now use split distances, which have been used in other simulation studies (eg. Capella et al. 2013).
