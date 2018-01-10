@@ -1,3 +1,6 @@
+# WORK WAS PRESENTED AT SICB 2018 CONFERENCE
+This was the original phylotocol that was superseded by the phylotocol version 2.0. This work was presented at the SICB 2018 Conference in San Francisco and provided a basis the necessary changes in version 2.0.
+
 # PLANNED ANALYSES FOR TESTING DAYHOFF RECODING  
  Principle Investigator: Joseph Ryan <br />
  Support Personnel: Alexandra Hernandez <br />
@@ -59,7 +62,7 @@ _RAxML_
 
 #### 2.4 Repeat steps 2.2-2.3 to simulate the evolution of amino acids along the phylogeny produced in Feuda et al. (2017) and generate maximum-likelihood trees for each of the simulated alignments.
 
-~~~#### 2.5 Combine each of the four phylogenetic reconstructions from 2.3.1 - 2.3.4 into one treefile along with the true tree used for simulation, as well as the suboptimal bootstraps trees generated in 2.1. Then run an approximately unbiased (AU) test on all of these trees given the simulated dataset.~~~
+~~2.5 Combine each of the four phylogenetic reconstructions from 2.3.1 - 2.3.4 into one treefile along with the true tree used for simulation, as well as the suboptimal bootstraps trees generated in 2.1. Then run an approximately unbiased (AU) test on all of these trees given the simulated dataset.~~
 
 ~~_CONSEL (Shimodaira & Hasegawa 2001)_~~
 
@@ -73,8 +76,8 @@ _RAxML_
 
 ~~```catpv RAxML_perSiteLLs > out.au```~~
 
-~~#### 2.6 AU Scoring
-We will score trees based on their rank and p-value generated from the AU test. For rank scores we will simply add ranks for all simulations. We will consider models with lower rank scores to be better. For p-value scores we will simply add p-values for each test. In this case, p-value scores that are higher will indicate better models. We will perform these rankings for each of the models and present these data as support for or against Dayhoff-6 recoding. ~~~~~
+~~2.6 AU Scoring
+We will score trees based on their rank and p-value generated from the AU test. For rank scores we will simply add ranks for all simulations. We will consider models with lower rank scores to be better. For p-value scores we will simply add p-values for each test. In this case, p-value scores that are higher will indicate better models. We will perform these rankings for each of the models and present these data as support for or against Dayhoff-6 recoding.~~
 
 #### 2.5 Calculate total split distances for each treatment and reconstruction
 We use the TOPD/FMTS program to calculate split distances comparing each reconstruction to the tree that was used for simulation
@@ -83,6 +86,8 @@ We use the TOPD/FMTS program to calculate split distances comparing each reconst
 
 ## 3 WORK COMPLETED SO FAR WITH DATES 
 18 December 2017- We started step 2.1 (suboptimal tree generation using bootstraps) prior to the release of phylotocol version 1.0, but did not examine the results. 
+
+03 January 2018- Steps 2.1, 2.3c, and 2.3d were not completed in time for the SICB conference. We performed step 2.5 using the results from 2.3a and 2.3b. 
 
 ## 4 LITERATURE REFERENCED  
 Capella-Gutiérrez S, Gabaldón T. Measuring guide-tree dependency of inferred gaps in progressive aligners. Bioinformatics. 2013 Feb 23;29(8):1011-7.
@@ -99,6 +104,8 @@ Shimodaira, H., & Hasegawa, M. (2001). CONSEL: for assessing the confidence of p
 
 Stamatakis, A. (2014) RAxML Version 8: A tool for phylogenetic analysis and post-analysis of large phylogenies. Bioinformatics, 30, 1312–1313.
 
-## 5 changes
+## 3 changes
 
 We decided that the AU tests which used PAM250 for sites analyses was biased in favor of PAM250 and against Decoding.  We now use split distances, which have been used in other simulation studies (eg. Capella et al. 2013).
+
+
