@@ -8,4 +8,4 @@ see https://github.com/josephryan/phylotocol for more info
 preliminary investigation on Dayhoff-6 recoding
 
 ### saturation test
-tests to quantify substitution saturation from seq-gen simulations
+test to quantify substitution saturation from seq-gen simulations
