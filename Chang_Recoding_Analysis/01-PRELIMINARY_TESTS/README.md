@@ -1,5 +1,5 @@
 # WORK WAS PRESENTED AT SICB 2018 CONFERENCE
-This was the original phylotocol that was superseded by the phylotocol version 2.0. This work was presented at the SICB 2018 Conference in San Francisco and provided a basis the necessary changes in version 2.0.
+This was the original phylotocol that was superseded by the phylotocol for investigating 6-state recoding strategies. This work was presented at the Society for Integrative and Comparative Biology 2018 Conference in San Francisco and provided the basis for our expanded analysis on 6-state recoding.
 
 # PLANNED ANALYSES FOR TESTING DAYHOFF RECODING  
  Principle Investigator: Joseph Ryan <br />
