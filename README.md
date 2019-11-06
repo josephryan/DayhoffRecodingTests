@@ -1,4 +1,4 @@
-# NOTE: These exploratory analyses are largely superceded by the Hernandez_Ryan_2018_RecodingSim repo https://github.com/josephryan/DayhoffRecodingTests
+# NOTE: These exploratory analyses are largely superceded by the Hernandez_Ryan_2018_RecodingSim repo https://github.com/josephryan/Hernandez_Ryan_2019_RecodingSim
 
 # DayhoffRecodingTests
 exploration of dayhoff recoding
